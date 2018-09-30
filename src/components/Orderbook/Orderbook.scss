@@ -1,0 +1,253 @@
+.Orderbook {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  &__header {
+    color: #fff;
+    background: #1a2125;
+
+    &__top {
+      position: relative;
+      border-bottom: 1px solid #15181c;
+      padding: 15px 40px;
+      padding-left: 65px;
+      font-size: 14px;
+      font-weight: bold;
+
+      // Spacer
+      &::before {
+        background: #1a2125;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        content: '';
+        display: block;
+        border-right: 1px solid #15181c;
+      }
+    }
+
+    &__bottom {
+      position: relative;
+      border-bottom: 1px solid #15181c;
+      padding: 15px 40px;
+      padding-left: 65px;
+
+      // Spacer
+      &::before {
+        background: #1a2125;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        content: '';
+        display: block;
+        border-right: 1px solid #15181c;
+      }
+
+      .bold {
+        margin-right: 5px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .help-text {
+        margin-right: 30px;
+        display: inline-block;
+        font-size: 11px;
+        color: #767a7c;
+      }
+    }
+  }
+
+
+  &__book {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    max-width: 420px;
+    color: #fff;
+    background: #18232b;
+    border-right: 1px solid #15181c;
+
+    &__header {
+      position: relative;
+      border-bottom: 1px solid #15181c;
+      background: #323d44;
+      color: #fff;
+      padding: 15px 20px;
+      padding-left: 65px;
+
+      // Spacer
+      &::before {
+        background: #323d44;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        content: '';
+        display: block;
+        border-right: 1px solid #15181c;
+      }
+
+      .heading {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    &__subheader {
+      text-align: right;
+      position: relative;
+      border-bottom: 1px solid #15181c;
+      color: #fff;
+      padding: 10px 0;
+      padding-left: 25px;
+
+      // Spacer
+      &::before {
+        background: #323d44;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        content: '';
+        display: block;
+        border-right: 1px solid #15181c;
+      }
+
+      .heading {
+        font-size: 12px;
+      }
+
+      .columns {
+        padding: 0 20px;
+
+        &::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      }
+
+      .column {
+        width: percentage(1/3);
+        float: left;
+      }
+    }
+
+    &__content {
+      flex-grow: 1;
+      position: relative;
+      border-bottom: 1px solid #15181c;
+      color: #fff;
+
+      // Spacer
+      &::before {
+        background: #323d44;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        content: '';
+        display: block;
+        border-right: 1px solid #15181c;
+      }
+
+      &-inner {
+        padding: 10px 0;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 25px;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      .loading--,
+      .error-- {
+        padding: 10px;
+        padding-left: 20px;
+      }
+
+      .asks {
+        .price {
+          color: #ee7248;
+        }
+      }
+
+      .bids {
+        .price {
+          color: #a1f379;
+        }
+      }
+    }
+
+    &__item {
+      text-align: right;
+      padding: 5px 0;
+      font-size: 10px;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      .columns {
+        padding: 0 20px;
+
+        &::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      }
+
+      .column {
+        width: percentage(1/3);
+        float: left;
+      }
+    }
+
+    #midpointPrice {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #15181c;
+      border-top: 1px solid #15181c;
+      font-size: 12px;
+      font-weight: bold;
+
+      .percentage {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.color-green {
+  color: #a1f379;
+}
+
+.color-red {
+  color: #ee7248;
+}
+
+.error-- {
+  color: #ee7248;
+  font-size: 12px;
+}

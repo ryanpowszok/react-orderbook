@@ -1,0 +1,71 @@
+# ----------------------------------------------------------------------------------------------
+# Git Ignores @see https://github.com/github/gitignore
+# ----------------------------------------------------------------------------------------------
+!.gitignore
+
+# Application Specific
+# ----------------------------------------------------------------------------------------------
+**/*.css
+/build
+
+# Bower / Node / Grunt / SASS
+# @see - http://stackoverflow.com/questions/39990017/should-i-commit-the-yarn-lock-file-and-what-is-it-for
+# ----------------------------------------------------------------------------------------------
+*node_modules
+*bower_components
+*.grunt
+*.sass-cache
+*.tmp
+*tmp
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+*.tar.gz
+*.cache-loader
+
+
+# OSX
+# ----------------------------------------------------------------------------------------------
+.DS_Store
+**/.DS_Store
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+.com.apple.timemachine.supported
+
+
+# Windows
+# ----------------------------------------------------------------------------------------------
+Thumbs.db
+
+
+# Sublime / Other Editors
+# ----------------------------------------------------------------------------------------------
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+.idea
+*.iml
+*.sublime-*
+
+
+# Tags
+# ----------------------------------------------------------------------------------------------
+# Ignore tags created by etags and ctags
+TAGS
+tags
+
+
+# Vim
+# ----------------------------------------------------------------------------------------------
+#.*.sw[a-z]
+#*.un~
+Session.vim

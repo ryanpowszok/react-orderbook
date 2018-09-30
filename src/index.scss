@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 300px;
+  padding: 0;
+}
+
+body {
+  background: #18232b;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+#root,
+.App {
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
